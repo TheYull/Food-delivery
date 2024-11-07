@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Fanta",
+        "price": 22,
+        "urlImg": "fanta.jpg",
+        "id": "d0"
+
+    },
+    {
+        "name": "Coca-Cola",
+        "price": 18,
+        "urlImg": "cola.jpg",
+        "id": "d1"
+
+    },
+    {
+        "name": "Sprite",
+        "price": 21,
+        "urlImg": "sprite.jpg",
+        "id": "d2"
+
+    },
+    {
+        "name": "Mirinda",
+        "price": 35,
+        "urlImg": "mirinda.jpg",
+        "id": "d3"
+
+    },
+    {
+        "name": "Dr Pepper",
+        "price": 32,
+        "urlImg": "drPepper.jpg",
+        "id": "d4"
+
+    },
+    {
+        "name": "Schweppes",
+        "price": 28,
+        "urlImg": "schweppes.jpg",
+        "id": "d5"
+
+    },
+    {
+        "name": "Квас",
+        "price": 35,
+        "urlImg": "kvass.jpg",
+        "id": "d6"
+
+    },
+    {
+        "name": "Starbucks",
+        "price": 135,
+        "urlImg": "starbucks.jpg",
+        "id": "d7"
+
+    }
+]

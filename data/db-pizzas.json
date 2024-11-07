@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Гавайська",
+        "price": 179,
+        "urlImg": "hawaii.jpeg",
+        "id": "p0"
+
+    },
+    {
+        "name": "Пепероні",
+        "price": 209,
+        "urlImg": "pepperoni.jpg",
+        "id": "p1"
+
+    },
+    {
+        "name": "Чотири сира",
+        "price": 205,
+        "urlImg": "fourСheeses.jpg",
+        "id": "p2"
+
+    },
+    {
+        "name": "Маргарита",
+        "price": 185,
+        "urlImg": "margarita.jpg",
+        "id": "p3"
+
+    },
+    {
+        "name": "Мисливська",
+        "price": 165,
+        "urlImg": "hunting.jpg",
+        "id": "p4"
+
+    },
+    {
+        "name": "Грибна",
+        "price": 185,
+        "urlImg": "mushroom.jpg",
+        "id": "p5"
+
+    },
+    {
+        "name": "Барбекю",
+        "price": 255,
+        "urlImg": "bbq.jpeg",
+        "id": "p6"
+
+    },
+    {
+        "name": "Піца від Шефа",
+        "price": 299,
+        "urlImg": "cook.jpeg",
+        "id": "p7"
+
+    },
+    {
+        "name": "Піца Дей",
+        "price": 205,
+        "urlImg": "days.jpg",
+        "id": "p8"
+
+    },
+    {
+        "name": "Бургер",
+        "price": 205,
+        "urlImg": "burger.jpeg",
+        "id": "p9"
+
+    },
+    {
+        "name": "Верона",
+        "price": 285,
+        "urlImg": "verona.jpeg",
+        "id": "p10"
+
+    },
+    {
+        "name": "Діабло",
+        "price": 255,
+        "urlImg": "diablo.jpeg",
+        "id": "p11"
+
+    }
+]
