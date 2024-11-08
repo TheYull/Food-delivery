@@ -113,7 +113,7 @@ class ProductView{
         
     }
 }
- 
+
 
 const db = new DataBase();
 const productView = new ProductView();
