@@ -8,12 +8,17 @@
 </head>
 <body>
     <header>
-        <a href="#"><img src="./src/img/logo.svg" alt="logo" class="logo"></a>
-        <div class="tabs">
-            <button id="pizzas-btn" data-category="pizzas">Піца</button>
-            <button id="drinks-btn" data-category="drinks">Напої</button>
+        <div class="header-container">
+            <a href="#"><img src="./src/img/logo.svg" alt="logo" class="logo"></a>
+            <div class="tabs">
+                <button id="pizzas-btn" data-category="pizzas">Піца</button>
+                <button id="drinks-btn" data-category="drinks">Напої</button>
+            </div>
+            <span class="circle-container">
+                <a href="#"><img src="./src/img/shopping-cart.svg" alt="basket"></a>
+                <span class="circle">10</span>
+            </span>
         </div>
-        <a href="#"><img src="./src/img/shopping-cart.svg" alt="basket"></a>
     </header>
 
     <div class="container">
@@ -22,7 +27,7 @@
         </div>
         
         <div class="container-products"></div>
-        <footer></footer>
+        <!-- <footer></footer> -->
     </div>
     <script src="./src/scripts/main.js"></script>
 </body>

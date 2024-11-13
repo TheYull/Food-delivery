@@ -70,6 +70,10 @@ class DataBase{
     getProduct(category){
         return this.data.filter(item => item.category === category);
     }
+
+    getProductById(id){
+        return this.data.find(obj => obj.id === id);
+    }
 }
 
 class ProductView{
@@ -95,11 +99,12 @@ class ProductView{
                 <h4>${product.name}</h4>
                 <div class="container-card-price">
                 <span><b>${product.price} грн</b></span>
-                <button>Замовити</button>
+                <button data-id="${product.id}">Замовити</button>
                 </div>
             </div>
             ` 
         })
+        this.onByProduct();
     }
 
     changeCategory(){
@@ -112,8 +117,85 @@ class ProductView{
         })
         
     }
+
+    onByProduct(){
+        const btns = document.querySelectorAll('button[data-id]');
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // console.log(btn.dataset.id);
+                basket.add(db.getProductById(btn.dataset.id));
+            })
+        })
+    }
+
 }
 
+class BasketProduct{
+    name;
+    count;
+    price;
+    id;
+    totalPrice;
+
+    constructor(name, count, price, id) {
+        this.name = name;
+        this.count = count;
+        this.price = price;
+        this.id = id;
+        this.totalPrice = price;
+    }
+
+}
+
+class Basket{
+    products = [];
+    basketContainer;
+
+    constructor(){
+        this.basketContainer = document.querySelector('.basket');
+    }
+
+    add(product){
+        console.log(product);
+        let currentProduct = this.products.find(obj => obj.id === product.id);
+
+        if(currentProduct){
+            currentProduct.count++;
+            currentProduct.totalPrice += product.price;
+            this.render();
+            return;
+        }
+
+        this.products.push(new BasketProduct(product.name, 1, product.price, product.id));
+        this.render();
+    }
+
+    createCard(product){
+        const card = document.createElement('div');
+        card.classList.add('basket-container')
+        card.insertAdjacentHTML('beforeend', `
+        <div class="basket-card">
+            <h4>${product.name}</h4>
+            <p>${product.price}</p>
+            <div class="basket-count-button">
+            <button class="count-btn">+</button>
+            <p>${product.count}</p>
+            <button class="count-btn">-</button></div>
+            <p>${product.totalPrice}</p>
+        </div>
+        `);
+
+        this.basketContainer.append(card);
+    }
+
+    render(){
+        this.basketContainer.innerHTML = "";
+        this.products.forEach(product => {
+            this.createCard(product);
+        })
+    }
+}
 
 const db = new DataBase();
 const productView = new ProductView();
+const basket = new Basket();
